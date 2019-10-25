@@ -7,3 +7,27 @@
 //
 
 import Foundation
+import UIKit
+
+class MainModule {
+    
+    func buildDefault() -> UIViewController {
+        let view = MainDefaultView()
+        let interactor = MainDefaultInteractor()
+        let presenter = MainDefaultPresneter()
+        let router = MainDefaultRouter()
+        
+        view.presenter = presenter
+        
+        presenter.view = view
+        presenter.interactor = interactor
+        presenter.router = router
+        
+        interactor.presenter = presenter
+        
+        router.presenter = presenter
+        router.viewController = view
+        
+        return view
+    }
+}

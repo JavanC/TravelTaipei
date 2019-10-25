@@ -20,7 +20,8 @@ extension AppDelegate: UIApplicationDelegate {
                      didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
         self.window = UIWindow(frame: UIScreen.main.bounds)
-//        self.window?.rootViewController = MainModule().buildDefault()
+        let vc = MainModule().buildDefault()
+        self.window?.rootViewController = UINavigationController(rootViewController: vc)
         self.window?.makeKeyAndVisible()
         
         return true

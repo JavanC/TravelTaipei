@@ -20,6 +20,10 @@
 		8DA3425E236321EF00B3F14C /* MainRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DA3425D236321EF00B3F14C /* MainRouter.swift */; };
 		8DA34260236321FF00B3F14C /* MainPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DA3425F236321FF00B3F14C /* MainPresenter.swift */; };
 		8DA342622363221400B3F14C /* MainInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DA342612363221400B3F14C /* MainInteractor.swift */; };
+		8DA34265236325A700B3F14C /* MainDefaultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DA34264236325A700B3F14C /* MainDefaultView.swift */; };
+		8DA34267236325BE00B3F14C /* MainDefaultRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DA34266236325BE00B3F14C /* MainDefaultRouter.swift */; };
+		8DA34269236325D200B3F14C /* MainDefaultPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DA34268236325D200B3F14C /* MainDefaultPresenter.swift */; };
+		8DA3426B2363260000B3F14C /* MainDefaultInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DA3426A2363260000B3F14C /* MainDefaultInteractor.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +55,10 @@
 		8DA3425D236321EF00B3F14C /* MainRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainRouter.swift; sourceTree = "<group>"; };
 		8DA3425F236321FF00B3F14C /* MainPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPresenter.swift; sourceTree = "<group>"; };
 		8DA342612363221400B3F14C /* MainInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainInteractor.swift; sourceTree = "<group>"; };
+		8DA34264236325A700B3F14C /* MainDefaultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainDefaultView.swift; sourceTree = "<group>"; };
+		8DA34266236325BE00B3F14C /* MainDefaultRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainDefaultRouter.swift; sourceTree = "<group>"; };
+		8DA34268236325D200B3F14C /* MainDefaultPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MainDefaultPresenter.swift; path = /Users/Javan/Documents/Git/TravelTaipei/TravelTaipei/Sources/Modules/Main/Implementations/MainDefaultPresenter.swift; sourceTree = "<absolute>"; };
+		8DA3426A2363260000B3F14C /* MainDefaultInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainDefaultInteractor.swift; sourceTree = "<group>"; };
 		9976B5FBC0EDE6267CAD2C5C /* Pods-TravelTaipeiTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TravelTaipeiTests.release.xcconfig"; path = "Target Support Files/Pods-TravelTaipeiTests/Pods-TravelTaipeiTests.release.xcconfig"; sourceTree = "<group>"; };
 		BD4D28B02C507F881E1DE35E /* Pods-TravelTaipeiTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TravelTaipeiTests.debug.xcconfig"; path = "Target Support Files/Pods-TravelTaipeiTests/Pods-TravelTaipeiTests.debug.xcconfig"; sourceTree = "<group>"; };
 		EFB142528A0E4934010AF362 /* Pods-TravelTaipei.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TravelTaipei.release.xcconfig"; path = "Target Support Files/Pods-TravelTaipei/Pods-TravelTaipei.release.xcconfig"; sourceTree = "<group>"; };
@@ -157,6 +165,7 @@
 			children = (
 				8DA3425823631F8100B3F14C /* MainModule.swift */,
 				8DA3425A2363219300B3F14C /* Interfaces */,
+				8DA342632363254300B3F14C /* Implementations */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -170,6 +179,17 @@
 				8DA3425B236321D300B3F14C /* MainView.swift */,
 			);
 			path = Interfaces;
+			sourceTree = "<group>";
+		};
+		8DA342632363254300B3F14C /* Implementations */ = {
+			isa = PBXGroup;
+			children = (
+				8DA3426A2363260000B3F14C /* MainDefaultInteractor.swift */,
+				8DA34268236325D200B3F14C /* MainDefaultPresenter.swift */,
+				8DA34266236325BE00B3F14C /* MainDefaultRouter.swift */,
+				8DA34264236325A700B3F14C /* MainDefaultView.swift */,
+			);
+			path = Implementations;
 			sourceTree = "<group>";
 		};
 		A802ACA3CD2A2B197635B492 /* Pods */ = {
@@ -353,9 +373,13 @@
 			files = (
 				8DA3425E236321EF00B3F14C /* MainRouter.swift in Sources */,
 				8DA34260236321FF00B3F14C /* MainPresenter.swift in Sources */,
+				8DA34267236325BE00B3F14C /* MainDefaultRouter.swift in Sources */,
+				8DA34269236325D200B3F14C /* MainDefaultPresenter.swift in Sources */,
 				8DA342372362E84200B3F14C /* ViewController.swift in Sources */,
 				8DA3425C236321D300B3F14C /* MainView.swift in Sources */,
+				8DA3426B2363260000B3F14C /* MainDefaultInteractor.swift in Sources */,
 				8DA3425923631F8100B3F14C /* MainModule.swift in Sources */,
+				8DA34265236325A700B3F14C /* MainDefaultView.swift in Sources */,
 				8DA342622363221400B3F14C /* MainInteractor.swift in Sources */,
 				8DA342352362E84200B3F14C /* AppDelegate.swift in Sources */,
 			);
