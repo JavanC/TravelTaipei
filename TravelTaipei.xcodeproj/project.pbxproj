@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -15,6 +15,11 @@
 		8DA3423C2362E84300B3F14C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8DA3423B2362E84300B3F14C /* Assets.xcassets */; };
 		8DA3423F2362E84300B3F14C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8DA3423D2362E84300B3F14C /* LaunchScreen.storyboard */; };
 		8DA3424A2362E84300B3F14C /* TravelTaipeiTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DA342492362E84300B3F14C /* TravelTaipeiTests.swift */; };
+		8DA3425923631F8100B3F14C /* MainModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DA3425823631F8100B3F14C /* MainModule.swift */; };
+		8DA3425C236321D300B3F14C /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DA3425B236321D300B3F14C /* MainView.swift */; };
+		8DA3425E236321EF00B3F14C /* MainRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DA3425D236321EF00B3F14C /* MainRouter.swift */; };
+		8DA34260236321FF00B3F14C /* MainPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DA3425F236321FF00B3F14C /* MainPresenter.swift */; };
+		8DA342622363221400B3F14C /* MainInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DA342612363221400B3F14C /* MainInteractor.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,6 +46,11 @@
 		8DA342452362E84300B3F14C /* TravelTaipeiTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TravelTaipeiTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8DA342492362E84300B3F14C /* TravelTaipeiTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravelTaipeiTests.swift; sourceTree = "<group>"; };
 		8DA3424B2362E84300B3F14C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8DA3425823631F8100B3F14C /* MainModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainModule.swift; sourceTree = "<group>"; };
+		8DA3425B236321D300B3F14C /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		8DA3425D236321EF00B3F14C /* MainRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainRouter.swift; sourceTree = "<group>"; };
+		8DA3425F236321FF00B3F14C /* MainPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPresenter.swift; sourceTree = "<group>"; };
+		8DA342612363221400B3F14C /* MainInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainInteractor.swift; sourceTree = "<group>"; };
 		9976B5FBC0EDE6267CAD2C5C /* Pods-TravelTaipeiTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TravelTaipeiTests.release.xcconfig"; path = "Target Support Files/Pods-TravelTaipeiTests/Pods-TravelTaipeiTests.release.xcconfig"; sourceTree = "<group>"; };
 		BD4D28B02C507F881E1DE35E /* Pods-TravelTaipeiTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TravelTaipeiTests.debug.xcconfig"; path = "Target Support Files/Pods-TravelTaipeiTests/Pods-TravelTaipeiTests.debug.xcconfig"; sourceTree = "<group>"; };
 		EFB142528A0E4934010AF362 /* Pods-TravelTaipei.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TravelTaipei.release.xcconfig"; path = "Target Support Files/Pods-TravelTaipei/Pods-TravelTaipei.release.xcconfig"; sourceTree = "<group>"; };
@@ -98,12 +108,11 @@
 		8DA342332362E84200B3F14C /* TravelTaipei */ = {
 			isa = PBXGroup;
 			children = (
+				8DA3425423631E6700B3F14C /* Assets */,
+				8DA3425523631F3900B3F14C /* Sources */,
 				8DA342342362E84200B3F14C /* AppDelegate.swift */,
 				8DA342362362E84200B3F14C /* ViewController.swift */,
 				8DA342382362E84200B3F14C /* Main.storyboard */,
-				8DA3423B2362E84300B3F14C /* Assets.xcassets */,
-				8DA3423D2362E84300B3F14C /* LaunchScreen.storyboard */,
-				8DA342402362E84300B3F14C /* Info.plist */,
 			);
 			path = TravelTaipei;
 			sourceTree = "<group>";
@@ -117,6 +126,52 @@
 			path = TravelTaipeiTests;
 			sourceTree = "<group>";
 		};
+		8DA3425423631E6700B3F14C /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				8DA3423B2362E84300B3F14C /* Assets.xcassets */,
+				8DA3423D2362E84300B3F14C /* LaunchScreen.storyboard */,
+				8DA342402362E84300B3F14C /* Info.plist */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
+		8DA3425523631F3900B3F14C /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				8DA3425623631F4600B3F14C /* Modules */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		8DA3425623631F4600B3F14C /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				8DA3425723631F6400B3F14C /* Main */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		8DA3425723631F6400B3F14C /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				8DA3425823631F8100B3F14C /* MainModule.swift */,
+				8DA3425A2363219300B3F14C /* Interfaces */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		8DA3425A2363219300B3F14C /* Interfaces */ = {
+			isa = PBXGroup;
+			children = (
+				8DA342612363221400B3F14C /* MainInteractor.swift */,
+				8DA3425F236321FF00B3F14C /* MainPresenter.swift */,
+				8DA3425D236321EF00B3F14C /* MainRouter.swift */,
+				8DA3425B236321D300B3F14C /* MainView.swift */,
+			);
+			path = Interfaces;
+			sourceTree = "<group>";
+		};
 		A802ACA3CD2A2B197635B492 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -125,7 +180,6 @@
 				BD4D28B02C507F881E1DE35E /* Pods-TravelTaipeiTests.debug.xcconfig */,
 				9976B5FBC0EDE6267CAD2C5C /* Pods-TravelTaipeiTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -297,7 +351,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8DA3425E236321EF00B3F14C /* MainRouter.swift in Sources */,
+				8DA34260236321FF00B3F14C /* MainPresenter.swift in Sources */,
 				8DA342372362E84200B3F14C /* ViewController.swift in Sources */,
+				8DA3425C236321D300B3F14C /* MainView.swift in Sources */,
+				8DA3425923631F8100B3F14C /* MainModule.swift in Sources */,
+				8DA342622363221400B3F14C /* MainInteractor.swift in Sources */,
 				8DA342352362E84200B3F14C /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -463,7 +522,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5332NKLEL7;
-				INFOPLIST_FILE = TravelTaipei/Info.plist;
+				INFOPLIST_FILE = TravelTaipei/Assets/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -482,7 +541,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5332NKLEL7;
-				INFOPLIST_FILE = TravelTaipei/Info.plist;
+				INFOPLIST_FILE = TravelTaipei/Assets/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
