@@ -1,17 +1,14 @@
 //
-//  MainInteractor.swift
+//  ApiServices.swift
 //  TravelTaipei
 //
-//  Created by Javan on 2019/10/25.
+//  Created by Javan on 2019/10/26.
 //  Copyright © 2019 Javan. All rights reserved.
 //
 
 import Foundation
 import RxSwift
 
-protocol MainInteractor: class {
-    
-    var presenter: MainPresenter? { get set }
-    
+protocol ApiServices {
     func touristSites() -> Observable<[TouristSite]>
 }

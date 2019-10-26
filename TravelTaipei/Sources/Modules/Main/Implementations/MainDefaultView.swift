@@ -25,7 +25,7 @@ class MainDefaultView: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        self.presenter?.viewDidLoad()
         self.view.backgroundColor = .lightGray
     }
 }

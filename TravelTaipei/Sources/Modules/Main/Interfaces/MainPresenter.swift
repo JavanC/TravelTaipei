@@ -13,4 +13,6 @@ protocol MainPresenter: class {
     var router: MainRouter? { get set }
     var interactor: MainInteractor? { get set }
     var view: MainView? { get set }
+    
+    func viewDidLoad()
 }

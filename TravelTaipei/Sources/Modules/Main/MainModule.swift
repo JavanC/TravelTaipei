@@ -13,7 +13,7 @@ class MainModule {
     
     func buildDefault() -> UIViewController {
         let view = MainDefaultView()
-        let interactor = MainDefaultInteractor()
+        let interactor = MainDefaultInteractor(apiServices: App.shared.apiServices)
         let presenter = MainDefaultPresneter()
         let router = MainDefaultRouter()
         

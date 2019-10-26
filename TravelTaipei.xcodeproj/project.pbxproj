@@ -24,6 +24,10 @@
 		8DA34267236325BE00B3F14C /* MainDefaultRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DA34266236325BE00B3F14C /* MainDefaultRouter.swift */; };
 		8DA34269236325D200B3F14C /* MainDefaultPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DA34268236325D200B3F14C /* MainDefaultPresenter.swift */; };
 		8DA3426B2363260000B3F14C /* MainDefaultInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DA3426A2363260000B3F14C /* MainDefaultInteractor.swift */; };
+		8DA3426F2363DBF900B3F14C /* ApiServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DA3426E2363DBF900B3F14C /* ApiServices.swift */; };
+		8DA342722363DCA700B3F14C /* TouristSite.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DA342712363DCA700B3F14C /* TouristSite.swift */; };
+		8DA342752363DEFA00B3F14C /* DataTaipeiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DA342742363DEFA00B3F14C /* DataTaipeiService.swift */; };
+		8DA342782363E3F600B3F14C /* App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DA342772363E3F600B3F14C /* App.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +63,10 @@
 		8DA34266236325BE00B3F14C /* MainDefaultRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainDefaultRouter.swift; sourceTree = "<group>"; };
 		8DA34268236325D200B3F14C /* MainDefaultPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MainDefaultPresenter.swift; path = /Users/Javan/Documents/Git/TravelTaipei/TravelTaipei/Sources/Modules/Main/Implementations/MainDefaultPresenter.swift; sourceTree = "<absolute>"; };
 		8DA3426A2363260000B3F14C /* MainDefaultInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainDefaultInteractor.swift; sourceTree = "<group>"; };
+		8DA3426E2363DBF900B3F14C /* ApiServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiServices.swift; sourceTree = "<group>"; };
+		8DA342712363DCA700B3F14C /* TouristSite.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TouristSite.swift; sourceTree = "<group>"; };
+		8DA342742363DEFA00B3F14C /* DataTaipeiService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataTaipeiService.swift; sourceTree = "<group>"; };
+		8DA342772363E3F600B3F14C /* App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = App.swift; sourceTree = "<group>"; };
 		9976B5FBC0EDE6267CAD2C5C /* Pods-TravelTaipeiTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TravelTaipeiTests.release.xcconfig"; path = "Target Support Files/Pods-TravelTaipeiTests/Pods-TravelTaipeiTests.release.xcconfig"; sourceTree = "<group>"; };
 		BD4D28B02C507F881E1DE35E /* Pods-TravelTaipeiTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TravelTaipeiTests.debug.xcconfig"; path = "Target Support Files/Pods-TravelTaipeiTests/Pods-TravelTaipeiTests.debug.xcconfig"; sourceTree = "<group>"; };
 		EFB142528A0E4934010AF362 /* Pods-TravelTaipei.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TravelTaipei.release.xcconfig"; path = "Target Support Files/Pods-TravelTaipei/Pods-TravelTaipei.release.xcconfig"; sourceTree = "<group>"; };
@@ -147,6 +155,8 @@
 		8DA3425523631F3900B3F14C /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				8DA342762363E3E800B3F14C /* App */,
+				8DA3426C2363DB8A00B3F14C /* Services */,
 				8DA3425623631F4600B3F14C /* Modules */,
 			);
 			path = Sources;
@@ -190,6 +200,48 @@
 				8DA34264236325A700B3F14C /* MainDefaultView.swift */,
 			);
 			path = Implementations;
+			sourceTree = "<group>";
+		};
+		8DA3426C2363DB8A00B3F14C /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				8DA3426D2363DBE200B3F14C /* Api */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		8DA3426D2363DBE200B3F14C /* Api */ = {
+			isa = PBXGroup;
+			children = (
+				8DA342702363DC7F00B3F14C /* Entities */,
+				8DA342732363DEAB00B3F14C /* Implementations */,
+				8DA3426E2363DBF900B3F14C /* ApiServices.swift */,
+			);
+			path = Api;
+			sourceTree = "<group>";
+		};
+		8DA342702363DC7F00B3F14C /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				8DA342712363DCA700B3F14C /* TouristSite.swift */,
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		8DA342732363DEAB00B3F14C /* Implementations */ = {
+			isa = PBXGroup;
+			children = (
+				8DA342742363DEFA00B3F14C /* DataTaipeiService.swift */,
+			);
+			path = Implementations;
+			sourceTree = "<group>";
+		};
+		8DA342762363E3E800B3F14C /* App */ = {
+			isa = PBXGroup;
+			children = (
+				8DA342772363E3F600B3F14C /* App.swift */,
+			);
+			path = App;
 			sourceTree = "<group>";
 		};
 		A802ACA3CD2A2B197635B492 /* Pods */ = {
@@ -374,13 +426,17 @@
 				8DA3425E236321EF00B3F14C /* MainRouter.swift in Sources */,
 				8DA34260236321FF00B3F14C /* MainPresenter.swift in Sources */,
 				8DA34267236325BE00B3F14C /* MainDefaultRouter.swift in Sources */,
+				8DA342782363E3F600B3F14C /* App.swift in Sources */,
 				8DA34269236325D200B3F14C /* MainDefaultPresenter.swift in Sources */,
 				8DA342372362E84200B3F14C /* ViewController.swift in Sources */,
 				8DA3425C236321D300B3F14C /* MainView.swift in Sources */,
+				8DA342722363DCA700B3F14C /* TouristSite.swift in Sources */,
+				8DA3426F2363DBF900B3F14C /* ApiServices.swift in Sources */,
 				8DA3426B2363260000B3F14C /* MainDefaultInteractor.swift in Sources */,
 				8DA3425923631F8100B3F14C /* MainModule.swift in Sources */,
 				8DA34265236325A700B3F14C /* MainDefaultView.swift in Sources */,
 				8DA342622363221400B3F14C /* MainInteractor.swift in Sources */,
+				8DA342752363DEFA00B3F14C /* DataTaipeiService.swift in Sources */,
 				8DA342352362E84200B3F14C /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

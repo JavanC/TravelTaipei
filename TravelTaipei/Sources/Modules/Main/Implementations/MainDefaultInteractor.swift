@@ -7,13 +7,21 @@
 //
 
 import Foundation
+import RxSwift
 
 class MainDefaultInteractor {
     
     weak var presenter: MainPresenter?
+    let apiServices: ApiServices
     
+    init(apiServices: ApiServices) {
+        self.apiServices = apiServices
+    }
 }
 
 extension MainDefaultInteractor: MainInteractor {
     
+    func touristSites() -> Observable<[TouristSite]> {
+        return self.apiServices.touristSites()
+    }
 }
