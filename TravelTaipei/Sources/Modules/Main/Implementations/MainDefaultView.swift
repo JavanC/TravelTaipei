@@ -36,6 +36,7 @@ class MainDefaultView: UIViewController {
     func configureTableView() {
         self.tableView = UITableView()
         self.tableView.separatorStyle = .none
+        self.tableView.allowsSelection = false
         self.tableView.delegate = self
         self.tableView.dataSource = self
         self.view.addSubview(tableView)
@@ -50,8 +51,21 @@ class MainDefaultView: UIViewController {
 extension MainDefaultView: MainView {
     
     func display(touristSites: [TouristSite]) {
-        self.touristSites = touristSites
-        self.tableView.reloadData()
+        // Setup IndexPaths
+        let initialIndex = self.touristSites.count
+        var indexPaths: [IndexPath] = []
+        for index in 0..<touristSites.count {
+            let indexPath = IndexPath(item: initialIndex + index, section: 0)
+            indexPaths.append(indexPath)
+        }
+        
+        // Add new tourist sites
+        self.touristSites += touristSites
+        
+        // Insert indexPaths at bottom with none animation
+        UIView.setAnimationsEnabled(false)
+        self.tableView.insertRows(at: indexPaths, with: .none)
+        UIView.setAnimationsEnabled(true)
     }
 }
 
@@ -67,8 +81,16 @@ extension MainDefaultView: UITableViewDataSource, UITableViewDelegate {
         return cell
     }
     
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        tableView.deselectRow(at: indexPath, animated: false)
-        print("Select tableview cell")
+    func scrollViewDidEndDragging(_ scrollView: UIScrollView, willDecelerate decelerate: Bool) {
+        // UITableView only moves in one direction, y axis
+        let currentOffset = scrollView.contentOffset.y
+        let maximumOffset = scrollView.contentSize.height - scrollView.frame.size.height
+        
+        // Change 10.0 to adjust the distance from bottom
+        if maximumOffset - currentOffset <= 10.0 {
+            print(touristSites.count)
+            let startIndex = touristSites.count
+            self.presenter?.touristSites(from: startIndex, to: startIndex + 3)
+        }
     }
 }

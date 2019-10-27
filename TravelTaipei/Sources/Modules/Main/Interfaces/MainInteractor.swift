@@ -12,5 +12,5 @@ protocol MainInteractor: class {
     
     var presenter: MainPresenter? { get set }
     
-    func touristSites() -> Observable<[TouristSite]>
+    func touristSites(from: Int, to: Int) -> Observable<[TouristSite]>
 }

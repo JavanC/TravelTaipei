@@ -15,4 +15,5 @@ protocol MainPresenter: class {
     var view: MainView? { get set }
     
     func viewDidLoad()
+    func touristSites(from: Int, to: Int)
 }

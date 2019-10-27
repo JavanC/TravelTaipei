@@ -10,5 +10,5 @@ import Foundation
 
 protocol ApiServices {
     
-    func touristSites() -> Observable<[TouristSite]>
+    func touristSites(from: Int, to: Int) -> Observable<[TouristSite]>
 }

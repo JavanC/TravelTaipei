@@ -18,8 +18,13 @@ class MainDefaultPresneter {
 extension MainDefaultPresneter: MainPresenter {
     
     func viewDidLoad() {
+        self.touristSites(from: 0, to: 3)
+    }
+    
+    func touristSites(from startIndex: Int, to endIndex: Int) {
         // View Loading
-        self.interactor?.touristSites()
+        self.interactor?.touristSites(from: startIndex, to: endIndex)
+            .subscribeOn(ConcurrentDispatchQueueScheduler(qos: .background))
             .observeOn(MainScheduler.instance)
             .subscribe(onNext: { touristSites in
             self.view?.display(touristSites: touristSites)
