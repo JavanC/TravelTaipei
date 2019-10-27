@@ -7,8 +7,8 @@
 //
 
 import Foundation
-import RxSwift
 
 protocol ApiServices {
+    
     func touristSites() -> Observable<[TouristSite]>
 }

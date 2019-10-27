@@ -6,7 +6,6 @@
 //
 
 import Foundation
-import RxSwift
 
 class MainDefaultPresneter {
     
@@ -20,9 +19,12 @@ extension MainDefaultPresneter: MainPresenter {
     
     func viewDidLoad() {
         // View Loading
-        self.interactor?.touristSites().subscribe(onNext: { touristSites in
-            
+        self.interactor?.touristSites()
+            .observeOn(MainScheduler.instance)
+            .subscribe(onNext: { touristSites in
+            self.view?.display(touristSites: touristSites)
         }, onError: { error in
+            // View show error
             print(error)
         }).disposed(by: disposeBag)
     }
