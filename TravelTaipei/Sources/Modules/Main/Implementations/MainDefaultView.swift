@@ -35,6 +35,8 @@ class MainDefaultView: UIViewController {
     
     func configureTableView() {
         self.tableView = UITableView()
+        self.tableView.separatorStyle = .none
+        self.tableView.delegate = self
         self.tableView.dataSource = self
         self.view.addSubview(tableView)
         self.tableView.snp.makeConstraints { maker in
@@ -53,7 +55,7 @@ extension MainDefaultView: MainView {
     }
 }
 
-extension MainDefaultView: UITableViewDataSource {
+extension MainDefaultView: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return touristSites.count
@@ -63,5 +65,10 @@ extension MainDefaultView: UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: "TouristCell", for: indexPath) as! TouristSiteTableViewCell
         cell.configure(touristSit: touristSites[indexPath.row])
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: false)
+        print("Select tableview cell")
     }
 }

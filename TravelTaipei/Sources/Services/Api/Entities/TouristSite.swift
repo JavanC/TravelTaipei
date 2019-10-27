@@ -24,4 +24,8 @@ struct TouristSite: Codable {
     let stitle: String
     let xbody: String
     let file: String
+    
+    var imageUrlList: [String] {
+        return file.components(separatedBy: "http://").filter{ $0.lowercased().contains(".jpg") }.map{ "http://" + $0 }
+    }
 }

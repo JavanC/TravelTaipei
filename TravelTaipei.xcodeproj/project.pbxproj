@@ -11,6 +11,8 @@
 		23147CF6E70837D98F91A801 /* Pods_TravelTaipei.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3FA57629C030AD1BC61E299B /* Pods_TravelTaipei.framework */; };
 		8D9761342365B29E00D8D500 /* TouristSiteTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D9761322365B29E00D8D500 /* TouristSiteTableViewCell.swift */; };
 		8D9761352365B29E00D8D500 /* TouristSiteTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8D9761332365B29E00D8D500 /* TouristSiteTableViewCell.xib */; };
+		8D9761382365C7D900D8D500 /* TouristImageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D9761362365C7D800D8D500 /* TouristImageCollectionViewCell.swift */; };
+		8D9761392365C7D900D8D500 /* TouristImageCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8D9761372365C7D800D8D500 /* TouristImageCollectionViewCell.xib */; };
 		8DA342352362E84200B3F14C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DA342342362E84200B3F14C /* AppDelegate.swift */; };
 		8DA342372362E84200B3F14C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DA342362362E84200B3F14C /* ViewController.swift */; };
 		8DA3423A2362E84200B3F14C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8DA342382362E84200B3F14C /* Main.storyboard */; };
@@ -48,6 +50,8 @@
 		3FA57629C030AD1BC61E299B /* Pods_TravelTaipei.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TravelTaipei.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D9761322365B29E00D8D500 /* TouristSiteTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TouristSiteTableViewCell.swift; sourceTree = "<group>"; };
 		8D9761332365B29E00D8D500 /* TouristSiteTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TouristSiteTableViewCell.xib; sourceTree = "<group>"; };
+		8D9761362365C7D800D8D500 /* TouristImageCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TouristImageCollectionViewCell.swift; sourceTree = "<group>"; };
+		8D9761372365C7D800D8D500 /* TouristImageCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TouristImageCollectionViewCell.xib; sourceTree = "<group>"; };
 		8DA342312362E84200B3F14C /* TravelTaipei.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TravelTaipei.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8DA342342362E84200B3F14C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8DA342362362E84200B3F14C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -110,6 +114,8 @@
 			children = (
 				8D9761322365B29E00D8D500 /* TouristSiteTableViewCell.swift */,
 				8D9761332365B29E00D8D500 /* TouristSiteTableViewCell.xib */,
+				8D9761362365C7D800D8D500 /* TouristImageCollectionViewCell.swift */,
+				8D9761372365C7D800D8D500 /* TouristImageCollectionViewCell.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -357,6 +363,7 @@
 				8DA3423C2362E84300B3F14C /* Assets.xcassets in Resources */,
 				8DA3423A2362E84200B3F14C /* Main.storyboard in Resources */,
 				8D9761352365B29E00D8D500 /* TouristSiteTableViewCell.xib in Resources */,
+				8D9761392365C7D900D8D500 /* TouristImageCollectionViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -451,6 +458,7 @@
 				8DA3425923631F8100B3F14C /* MainModule.swift in Sources */,
 				8D9761342365B29E00D8D500 /* TouristSiteTableViewCell.swift in Sources */,
 				8DA34265236325A700B3F14C /* MainDefaultView.swift in Sources */,
+				8D9761382365C7D900D8D500 /* TouristImageCollectionViewCell.swift in Sources */,
 				8DA342622363221400B3F14C /* MainInteractor.swift in Sources */,
 				8DA342752363DEFA00B3F14C /* DataTaipeiService.swift in Sources */,
 				8DA342352362E84200B3F14C /* AppDelegate.swift in Sources */,
