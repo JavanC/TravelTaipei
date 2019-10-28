@@ -14,6 +14,8 @@ protocol MainPresenter: class {
     var interactor: MainInteractor? { get set }
     var view: MainView? { get set }
     
-    func viewDidLoad()
-    func touristSites(from: Int, to: Int)
+    var touristSiteCount: Int { get }
+    func touristSite(at index: Int) -> TouristSite?
+    func loadNextTouristSites(count: Int)
+    func didSelect(_ touristSite: TouristSite, imageIndex: Int)
 }

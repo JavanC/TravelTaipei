@@ -12,7 +12,7 @@ protocol MainView: class {
     
     var presenter: MainPresenter? { get set }
  
-    func display(touristSites: [TouristSite])
+    func displayTouristSites(insertRowsAt indexPaths: [IndexPath])
     func display(error: Error)
     func displayLoading()
     func hideLoading()

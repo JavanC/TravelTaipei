@@ -43,7 +43,7 @@ class MainInteractorTests: XCTestCase {
     func testLoadWithSeccessReturnTouristSites() {
         let disposeBag = DisposeBag()
         self.fakeApiServices.observable = TouristSitesObserverble.successfulObserverble
-        self.interactor.touristSites(from: 0, to: 9).subscribe(onNext: { touristSites in
+        self.interactor.loadTouristSites(from: 0, to: 9).subscribe(onNext: { touristSites in
             XCTAssertEqual(touristSites.count, TouristSitesObserverble.touristSites.count)
         }, onError: { error in
             XCTFail("should be case success instead failure")
@@ -53,7 +53,7 @@ class MainInteractorTests: XCTestCase {
     func testLoadWithErrorReturnError() {
         let disposeBag = DisposeBag()
         self.fakeApiServices.observable = TouristSitesObserverble.errorObserverble
-        self.interactor.touristSites(from: 0, to: 9).subscribe(onNext: { touristSites in
+        self.interactor.loadTouristSites(from: 0, to: 9).subscribe(onNext: { touristSites in
             XCTFail("should be case failure instead success")
         }, onError: { error in
             XCTAssertEqual(error.localizedDescription, RxCocoaURLError.unknown.localizedDescription)

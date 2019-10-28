@@ -17,4 +17,7 @@ class MainDefaultRouter {
 
 extension MainDefaultRouter: MainRouter {
     
+    func showDetail(for: TouristSite, imageIndex: Int) {
+        // Show Detail Screen
+    }
 }

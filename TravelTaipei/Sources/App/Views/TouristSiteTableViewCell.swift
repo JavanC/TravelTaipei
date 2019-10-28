@@ -13,7 +13,7 @@ class TouristSiteTableViewCell: UITableViewCell {
     @IBOutlet weak var title: UILabel!
     @IBOutlet weak var discription: UILabel!
     @IBOutlet weak var collectionView: UICollectionView!
-    private var imageUrlList: [String] = []
+    private var touristSite: TouristSite?
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -30,22 +30,22 @@ class TouristSiteTableViewCell: UITableViewCell {
         self.collectionView.register(nib, forCellWithReuseIdentifier: "imgCell")
     }
     
-    func configure(touristSit: TouristSite) {
-        self.title.text = touristSit.stitle
-        self.discription.text = touristSit.xbody
-        self.imageUrlList = touristSit.imageUrlList
+    func configure(touristSite: TouristSite?) {
+        self.touristSite = touristSite
+        self.title.text = touristSite?.stitle
+        self.discription.text = touristSite?.xbody
     }
 }
 
 extension TouristSiteTableViewCell: UICollectionViewDataSource, UICollectionViewDelegate {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return imageUrlList.count
+        return touristSite?.imageUrlList.count ?? 0
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "imgCell", for: indexPath) as! TouristImageCollectionViewCell
-        cell.configure(imageUrl: imageUrlList[indexPath.row])
+        cell.configure(imageUrl: touristSite?.imageUrlList[indexPath.row])
         return cell
     }
     

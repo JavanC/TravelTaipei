@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		052ACC3431E01C78DC70E0E5 /* Pods_TravelTaipeiTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1CD5CC2DDB665D48820FC654 /* Pods_TravelTaipeiTests.framework */; };
 		23147CF6E70837D98F91A801 /* Pods_TravelTaipei.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3FA57629C030AD1BC61E299B /* Pods_TravelTaipei.framework */; };
+		8D38C12E2366FE3D0073EEB4 /* MainPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D38C12D2366FE3D0073EEB4 /* MainPresenterTests.swift */; };
 		8D9761342365B29E00D8D500 /* TouristSiteTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D9761322365B29E00D8D500 /* TouristSiteTableViewCell.swift */; };
 		8D9761352365B29E00D8D500 /* TouristSiteTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8D9761332365B29E00D8D500 /* TouristSiteTableViewCell.xib */; };
 		8D9761382365C7D900D8D500 /* TouristImageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D9761362365C7D800D8D500 /* TouristImageCollectionViewCell.swift */; };
@@ -18,7 +19,7 @@
 		8DA3423A2362E84200B3F14C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8DA342382362E84200B3F14C /* Main.storyboard */; };
 		8DA3423C2362E84300B3F14C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8DA3423B2362E84300B3F14C /* Assets.xcassets */; };
 		8DA3423F2362E84300B3F14C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8DA3423D2362E84300B3F14C /* LaunchScreen.storyboard */; };
-		8DA3424A2362E84300B3F14C /* TravelTaipeiTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DA342492362E84300B3F14C /* TravelTaipeiTests.swift */; };
+		8DA3424A2362E84300B3F14C /* MainInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DA342492362E84300B3F14C /* MainInteractorTests.swift */; };
 		8DA3425923631F8100B3F14C /* MainModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DA3425823631F8100B3F14C /* MainModule.swift */; };
 		8DA3425C236321D300B3F14C /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DA3425B236321D300B3F14C /* MainView.swift */; };
 		8DA3425E236321EF00B3F14C /* MainRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DA3425D236321EF00B3F14C /* MainRouter.swift */; };
@@ -48,6 +49,7 @@
 		02ACEF33A0DF6199AD1E4505 /* Pods-TravelTaipei.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TravelTaipei.debug.xcconfig"; path = "Target Support Files/Pods-TravelTaipei/Pods-TravelTaipei.debug.xcconfig"; sourceTree = "<group>"; };
 		1CD5CC2DDB665D48820FC654 /* Pods_TravelTaipeiTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TravelTaipeiTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3FA57629C030AD1BC61E299B /* Pods_TravelTaipei.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TravelTaipei.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8D38C12D2366FE3D0073EEB4 /* MainPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPresenterTests.swift; sourceTree = "<group>"; };
 		8D9761322365B29E00D8D500 /* TouristSiteTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TouristSiteTableViewCell.swift; sourceTree = "<group>"; };
 		8D9761332365B29E00D8D500 /* TouristSiteTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TouristSiteTableViewCell.xib; sourceTree = "<group>"; };
 		8D9761362365C7D800D8D500 /* TouristImageCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TouristImageCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -60,7 +62,7 @@
 		8DA3423E2362E84300B3F14C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8DA342402362E84300B3F14C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8DA342452362E84300B3F14C /* TravelTaipeiTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TravelTaipeiTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		8DA342492362E84300B3F14C /* TravelTaipeiTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravelTaipeiTests.swift; sourceTree = "<group>"; };
+		8DA342492362E84300B3F14C /* MainInteractorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainInteractorTests.swift; sourceTree = "<group>"; };
 		8DA3424B2362E84300B3F14C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8DA3425823631F8100B3F14C /* MainModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainModule.swift; sourceTree = "<group>"; };
 		8DA3425B236321D300B3F14C /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
@@ -109,6 +111,15 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		8D38C12C2366F09C0073EEB4 /* MainInteractorTests */ = {
+			isa = PBXGroup;
+			children = (
+				8DA342492362E84300B3F14C /* MainInteractorTests.swift */,
+				8D38C12D2366FE3D0073EEB4 /* MainPresenterTests.swift */,
+			);
+			path = MainInteractorTests;
+			sourceTree = "<group>";
+		};
 		8D9761312365B25300D8D500 /* Views */ = {
 			isa = PBXGroup;
 			children = (
@@ -155,7 +166,7 @@
 		8DA342482362E84300B3F14C /* TravelTaipeiTests */ = {
 			isa = PBXGroup;
 			children = (
-				8DA342492362E84300B3F14C /* TravelTaipeiTests.swift */,
+				8D38C12C2366F09C0073EEB4 /* MainInteractorTests */,
 				8DA3424B2362E84300B3F14C /* Info.plist */,
 			);
 			path = TravelTaipeiTests;
@@ -469,7 +480,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8DA3424A2362E84300B3F14C /* TravelTaipeiTests.swift in Sources */,
+				8DA3424A2362E84300B3F14C /* MainInteractorTests.swift in Sources */,
+				8D38C12E2366FE3D0073EEB4 /* MainPresenterTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

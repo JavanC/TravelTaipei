@@ -13,7 +13,6 @@ import SnapKit
 class MainDefaultView: UIViewController {
     
     var presenter: MainPresenter?
-    var touristSites: [TouristSite] = []
     var tableView: UITableView!
     var activityIndicator: UIActivityIndicatorView!
     
@@ -23,7 +22,7 @@ class MainDefaultView: UIViewController {
         self.configureNavigationBar()
         self.configureTableView()
         self.configureActivityIndicator()
-        self.presenter?.viewDidLoad()
+        self.presenter?.loadNextTouristSites(count: 10)
     }
     
     // MARK: - Configure
@@ -60,19 +59,7 @@ class MainDefaultView: UIViewController {
 
 extension MainDefaultView: MainView {
     
-    func display(touristSites: [TouristSite]) {
-        // Setup IndexPaths
-        let initialIndex = self.touristSites.count
-        var indexPaths: [IndexPath] = []
-        for index in 0..<touristSites.count {
-            let indexPath = IndexPath(item: initialIndex + index, section: 0)
-            indexPaths.append(indexPath)
-        }
-        
-        // Add new tourist sites
-        self.touristSites += touristSites
-        
-        // Insert indexPaths at bottom with none animation
+    func displayTouristSites(insertRowsAt indexPaths: [IndexPath]) {
         UIView.setAnimationsEnabled(false)
         self.tableView.insertRows(at: indexPaths, with: .none)
         UIView.setAnimationsEnabled(true)
@@ -98,12 +85,13 @@ extension MainDefaultView: MainView {
 extension MainDefaultView: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return touristSites.count
+        return presenter?.touristSiteCount ?? 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "TouristCell", for: indexPath) as! TouristSiteTableViewCell
-        cell.configure(touristSit: touristSites[indexPath.row])
+        let touristSite = presenter?.touristSite(at: indexPath.row)
+        cell.configure(touristSite: touristSite)
         return cell
     }
     
@@ -114,8 +102,7 @@ extension MainDefaultView: UITableViewDataSource, UITableViewDelegate {
         
         // Change 10.0 to adjust the distance from bottom
         if maximumOffset - currentOffset <= 10.0 {
-            let startIndex = touristSites.count
-            self.presenter?.touristSites(from: startIndex, to: startIndex + 9)
+            self.presenter?.loadNextTouristSites(count: 10)
         }
     }
 }

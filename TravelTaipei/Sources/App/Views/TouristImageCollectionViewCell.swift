@@ -18,7 +18,8 @@ class TouristImageCollectionViewCell: UICollectionViewCell {
         // Initialization code
     }
 
-    func configure(imageUrl: String) {
+    func configure(imageUrl: String?) {
+        guard let imageUrl = imageUrl else { return }
         let url = URL(string: imageUrl)
         self.imageView.kf.setImage(with: url)
     }

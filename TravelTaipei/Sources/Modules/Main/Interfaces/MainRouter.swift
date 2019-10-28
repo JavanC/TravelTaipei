@@ -11,4 +11,6 @@ import Foundation
 protocol MainRouter: class {
     
     var presenter: MainPresenter? { get set }
+    
+    func showDetail(for: TouristSite, imageIndex: Int)
 }

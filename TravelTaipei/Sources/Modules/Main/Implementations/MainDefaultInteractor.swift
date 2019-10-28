@@ -20,7 +20,7 @@ class MainDefaultInteractor {
 
 extension MainDefaultInteractor: MainInteractor {
     
-    func touristSites(from startIndex: Int, to endIndex: Int) -> Observable<[TouristSite]> {
+    func loadTouristSites(from startIndex: Int, to endIndex: Int) -> Observable<[TouristSite]> {
         return self.apiServices.touristSites(from: startIndex, to: endIndex)
     }
 }

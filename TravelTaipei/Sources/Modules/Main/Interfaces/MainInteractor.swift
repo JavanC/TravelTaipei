@@ -11,6 +11,6 @@ import Foundation
 protocol MainInteractor: class {
     
     var presenter: MainPresenter? { get set }
-    
-    func touristSites(from: Int, to: Int) -> Observable<[TouristSite]>
+
+    func loadTouristSites(from startIndex: Int, to endIndex: Int) -> Observable<[TouristSite]>
 }
