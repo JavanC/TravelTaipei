@@ -13,14 +13,16 @@ import SnapKit
 class MainDefaultView: UIViewController {
     
     var presenter: MainPresenter?
-    var tableView: UITableView!
     var touristSites: [TouristSite] = []
+    var tableView: UITableView!
+    var activityIndicator: UIActivityIndicatorView!
     
     // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
         self.configureNavigationBar()
         self.configureTableView()
+        self.configureActivityIndicator()
         self.presenter?.viewDidLoad()
     }
     
@@ -46,6 +48,14 @@ class MainDefaultView: UIViewController {
         let nib = UINib(nibName:"TouristSiteTableViewCell", bundle:nil)
         self.tableView.register(nib, forCellReuseIdentifier:"TouristCell")
     }
+    
+    func configureActivityIndicator() {
+        self.activityIndicator = UIActivityIndicatorView(style: .gray)
+        self.view.addSubview(activityIndicator)
+        self.activityIndicator.snp.makeConstraints { maker in
+            maker.center.equalTo(view)
+        }
+    }
 }
 
 extension MainDefaultView: MainView {
@@ -67,6 +77,22 @@ extension MainDefaultView: MainView {
         self.tableView.insertRows(at: indexPaths, with: .none)
         UIView.setAnimationsEnabled(true)
     }
+    
+    func display(error: Error) {
+        let alert = UIAlertController(title: "Oops!", message: error.localizedDescription, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+        self.present(alert, animated: true, completion: nil)
+    }
+    
+    func displayLoading() {
+        self.activityIndicator.isHidden = false
+        self.activityIndicator.startAnimating()
+    }
+    
+    func hideLoading() {
+        self.activityIndicator.stopAnimating()
+        self.activityIndicator.isHidden = true
+    }
 }
 
 extension MainDefaultView: UITableViewDataSource, UITableViewDelegate {
@@ -84,13 +110,12 @@ extension MainDefaultView: UITableViewDataSource, UITableViewDelegate {
     func scrollViewDidEndDragging(_ scrollView: UIScrollView, willDecelerate decelerate: Bool) {
         // UITableView only moves in one direction, y axis
         let currentOffset = scrollView.contentOffset.y
-        let maximumOffset = scrollView.contentSize.height - scrollView.frame.size.height
+        let maximumOffset = scrollView.contentSize.height - scrollView.bounds.height
         
         // Change 10.0 to adjust the distance from bottom
         if maximumOffset - currentOffset <= 10.0 {
-            print(touristSites.count)
             let startIndex = touristSites.count
-            self.presenter?.touristSites(from: startIndex, to: startIndex + 3)
+            self.presenter?.touristSites(from: startIndex, to: startIndex + 9)
         }
     }
 }

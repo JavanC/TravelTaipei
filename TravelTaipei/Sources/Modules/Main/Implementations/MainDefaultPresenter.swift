@@ -18,19 +18,27 @@ class MainDefaultPresneter {
 extension MainDefaultPresneter: MainPresenter {
     
     func viewDidLoad() {
-        self.touristSites(from: 0, to: 3)
+        self.view?.displayLoading()
+        self.interactor?.touristSites(from: 0, to: 9)
+            .subscribeOn(ConcurrentDispatchQueueScheduler(qos: .background))
+            .observeOn(MainScheduler.instance)
+            .subscribe(onNext: { touristSites in
+                self.view?.hideLoading()
+                self.view?.display(touristSites: touristSites)
+            }, onError: { error in
+                self.view?.hideLoading()
+                self.view?.display(error: error)
+            }).disposed(by: disposeBag)
     }
     
     func touristSites(from startIndex: Int, to endIndex: Int) {
-        // View Loading
         self.interactor?.touristSites(from: startIndex, to: endIndex)
             .subscribeOn(ConcurrentDispatchQueueScheduler(qos: .background))
             .observeOn(MainScheduler.instance)
             .subscribe(onNext: { touristSites in
             self.view?.display(touristSites: touristSites)
         }, onError: { error in
-            // View show error
-            print(error)
+            self.view?.display(error: error)
         }).disposed(by: disposeBag)
     }
 }

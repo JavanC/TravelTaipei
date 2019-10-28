@@ -11,6 +11,9 @@ import Foundation
 protocol MainView: class {
     
     var presenter: MainPresenter? { get set }
-    
+ 
     func display(touristSites: [TouristSite])
+    func display(error: Error)
+    func displayLoading()
+    func hideLoading()
 }
