@@ -91,7 +91,7 @@ extension MainDefaultView: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "TouristCell", for: indexPath) as! TouristSiteTableViewCell
         let touristSite = presenter?.touristSite(at: indexPath.row)
-        cell.configure(touristSite: touristSite)
+        cell.configure(touristSite: touristSite, indexPath: indexPath)
         return cell
     }
     
@@ -103,6 +103,15 @@ extension MainDefaultView: UITableViewDataSource, UITableViewDelegate {
         // Change 10.0 to adjust the distance from bottom
         if maximumOffset - currentOffset <= 10.0 {
             self.presenter?.loadNextTouristSites(count: 10)
+        }
+    }
+}
+
+extension MainDefaultView: TouristSiteTableViewCellDelegate {
+    
+    func select(cellIndex: Int, imageIndex: Int) {
+        if let touristSite = presenter?.touristSite(at: cellIndex) {
+            presenter?.didSelect(touristSite, imageIndex: imageIndex)
         }
     }
 }

@@ -12,5 +12,5 @@ protocol MainRouter: class {
     
     var presenter: MainPresenter? { get set }
     
-    func showDetail(for: TouristSite, imageIndex: Int)
+    func showDetail(for touristSite: TouristSite, imageIndex: Int)
 }

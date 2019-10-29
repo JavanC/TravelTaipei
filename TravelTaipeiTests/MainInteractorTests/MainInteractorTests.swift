@@ -11,6 +11,7 @@ import XCTest
 
 class MainInteractorTests: XCTestCase {
 
+    // MARK: - Mock
     class FakeApiServices: ApiServices {
         var observable: Observable<[TouristSite]>!
         func touristSites(from: Int, to: Int) -> Observable<[TouristSite]> {
@@ -19,14 +20,20 @@ class MainInteractorTests: XCTestCase {
     }
     
     struct TouristSitesObserverble {
-        static let errorObserverble: Observable<[TouristSite]> = Observable.error(RxCocoaURLError.unknown)
-        static let successfulObserverble: Observable<[TouristSite]> = Observable.create { observer in
-            observer.onNext(touristSites)
-            return Disposables.create()
+        static let error: Observable<[TouristSite]> = Observable.error(RxCocoaURLError.unknown)
+        static func successful(count: Int) -> Observable<[TouristSite]> {
+            return  Observable.create { observer in
+                observer.onNext(touristSites(count: count))
+                observer.onCompleted()
+                return Disposables.create()
+            }
         }
-        static let touristSites = Array(repeating: TouristSite(stitle: "a", xbody: "aa", file: "aaa"), count: 10)
+        static func touristSites(count: Int) -> [TouristSite] {
+            return Array(repeating: TouristSite(stitle: "a", xbody: "aa", file: "aaa"), count: count)
+        }
     }
     
+    // MARK: - Setup
     var interactor: MainDefaultInteractor!
     var fakeApiServices = FakeApiServices()
     
@@ -40,19 +47,20 @@ class MainInteractorTests: XCTestCase {
         super.tearDown()
     }
 
-    func testLoadWithSeccessReturnTouristSites() {
+    // MARK: - Tests
+    func testLoadTouristSitesSeccessful() {
         let disposeBag = DisposeBag()
-        self.fakeApiServices.observable = TouristSitesObserverble.successfulObserverble
+        self.fakeApiServices.observable = TouristSitesObserverble.successful(count: 10)
         self.interactor.loadTouristSites(from: 0, to: 9).subscribe(onNext: { touristSites in
-            XCTAssertEqual(touristSites.count, TouristSitesObserverble.touristSites.count)
+            XCTAssertEqual(touristSites.count, 10)
         }, onError: { error in
             XCTFail("should be case success instead failure")
         }).disposed(by: disposeBag)
     }
 
-    func testLoadWithErrorReturnError() {
+    func testLoadTouristSitesError() {
         let disposeBag = DisposeBag()
-        self.fakeApiServices.observable = TouristSitesObserverble.errorObserverble
+        self.fakeApiServices.observable = TouristSitesObserverble.error
         self.interactor.loadTouristSites(from: 0, to: 9).subscribe(onNext: { touristSites in
             XCTFail("should be case failure instead success")
         }, onError: { error in

@@ -8,12 +8,18 @@
 
 import UIKit
 
+protocol TouristSiteTableViewCellDelegate {
+    func select(cellIndex: Int, imageIndex: Int)
+}
+
 class TouristSiteTableViewCell: UITableViewCell {
 
     @IBOutlet weak var title: UILabel!
     @IBOutlet weak var discription: UILabel!
     @IBOutlet weak var collectionView: UICollectionView!
-    private var touristSite: TouristSite?
+    var delegate: TouristSiteTableViewCellDelegate?
+    private var cellIndex: Int?
+    private var imageUrlList: [String]?
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -30,26 +36,30 @@ class TouristSiteTableViewCell: UITableViewCell {
         self.collectionView.register(nib, forCellWithReuseIdentifier: "imgCell")
     }
     
-    func configure(touristSite: TouristSite?) {
-        self.touristSite = touristSite
+    func configure(touristSite: TouristSite?, indexPath: IndexPath) {
         self.title.text = touristSite?.stitle
         self.discription.text = touristSite?.xbody
+        self.imageUrlList = touristSite?.imageUrlList
+        self.cellIndex = indexPath.row
     }
 }
 
 extension TouristSiteTableViewCell: UICollectionViewDataSource, UICollectionViewDelegate {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return touristSite?.imageUrlList.count ?? 0
+        return imageUrlList?.count ?? 0
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "imgCell", for: indexPath) as! TouristImageCollectionViewCell
-        cell.configure(imageUrl: touristSite?.imageUrlList[indexPath.row])
+        cell.configure(imageUrl: imageUrlList?[indexPath.row])
         return cell
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         print("Select collection view cell")
+        if let cellIndex = cellIndex {
+            self.delegate?.select(cellIndex: cellIndex, imageIndex: indexPath.row)
+        }
     }
 }

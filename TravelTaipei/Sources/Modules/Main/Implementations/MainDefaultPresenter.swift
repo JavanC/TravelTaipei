@@ -12,9 +12,9 @@ class MainDefaultPresneter {
     var router: MainRouter?
     var interactor: MainInteractor?
     weak var view: MainView?
-    var disposeBag = DisposeBag()
     
     private var touristSites: [TouristSite] = []
+    private var disposeBag = DisposeBag()
 }
 
 extension MainDefaultPresneter: MainPresenter {
