@@ -142,4 +142,11 @@ class MainPresenterTests: XCTestCase {
         self.presenter.loadNextTouristSites(count: 1)
         wait(for: [promise], timeout: 1)
     }
+    
+    func testSelectTouristSite() {
+        let fakeTouristSite = TouristSite(stitle: "a", xbody: "aa", file: "aaa")
+        self.presenter.didSelect(fakeTouristSite, imageIndex: 1)
+        XCTAssertEqual(mockRouter.touristSite?.stitle, fakeTouristSite.stitle)
+        XCTAssertEqual(mockRouter.imageIndex, 1)
+    }
 }

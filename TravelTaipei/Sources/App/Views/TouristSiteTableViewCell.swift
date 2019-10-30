@@ -57,7 +57,6 @@ extension TouristSiteTableViewCell: UICollectionViewDataSource, UICollectionView
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        print("Select collection view cell")
         if let cellIndex = cellIndex {
             self.delegate?.select(cellIndex: cellIndex, imageIndex: indexPath.row)
         }

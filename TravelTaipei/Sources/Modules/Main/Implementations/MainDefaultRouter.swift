@@ -17,7 +17,8 @@ class MainDefaultRouter {
 
 extension MainDefaultRouter: MainRouter {
     
-    func showDetail(for: TouristSite, imageIndex: Int) {
-        // Show Detail Screen
+    func showDetail(for touristSite: TouristSite, imageIndex: Int) {
+        let viewController = DetailModule().buildDefault(with: touristSite)
+        self.viewController?.show(viewController, sender: nil)
     }
 }

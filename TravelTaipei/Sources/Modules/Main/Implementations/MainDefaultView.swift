@@ -92,6 +92,7 @@ extension MainDefaultView: UITableViewDataSource, UITableViewDelegate {
         let cell = tableView.dequeueReusableCell(withIdentifier: "TouristCell", for: indexPath) as! TouristSiteTableViewCell
         let touristSite = presenter?.touristSite(at: indexPath.row)
         cell.configure(touristSite: touristSite, indexPath: indexPath)
+        cell.delegate = self
         return cell
     }
     
@@ -111,7 +112,7 @@ extension MainDefaultView: TouristSiteTableViewCellDelegate {
     
     func select(cellIndex: Int, imageIndex: Int) {
         if let touristSite = presenter?.touristSite(at: cellIndex) {
-            presenter?.didSelect(touristSite, imageIndex: imageIndex)
+            self.presenter?.didSelect(touristSite, imageIndex: imageIndex)
         }
     }
 }

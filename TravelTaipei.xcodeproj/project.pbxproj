@@ -10,6 +10,15 @@
 		052ACC3431E01C78DC70E0E5 /* Pods_TravelTaipeiTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1CD5CC2DDB665D48820FC654 /* Pods_TravelTaipeiTests.framework */; };
 		23147CF6E70837D98F91A801 /* Pods_TravelTaipei.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3FA57629C030AD1BC61E299B /* Pods_TravelTaipei.framework */; };
 		8D38C12E2366FE3D0073EEB4 /* MainPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D38C12D2366FE3D0073EEB4 /* MainPresenterTests.swift */; };
+		8D3E42122369169E00F3BF1F /* DetailModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D3E42112369169E00F3BF1F /* DetailModule.swift */; };
+		8D3E4216236916CA00F3BF1F /* DetailInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D3E4215236916CA00F3BF1F /* DetailInteractor.swift */; };
+		8D3E4218236916D400F3BF1F /* DetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D3E4217236916D400F3BF1F /* DetailPresenter.swift */; };
+		8D3E421A236916DF00F3BF1F /* DetailRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D3E4219236916DF00F3BF1F /* DetailRouter.swift */; };
+		8D3E421D236916FF00F3BF1F /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D3E421C236916FF00F3BF1F /* DetailView.swift */; };
+		8D3E421F2369171D00F3BF1F /* DetailDefaultInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D3E421E2369171D00F3BF1F /* DetailDefaultInteractor.swift */; };
+		8D3E42212369172D00F3BF1F /* DetailDefaultPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D3E42202369172D00F3BF1F /* DetailDefaultPresenter.swift */; };
+		8D3E42232369173800F3BF1F /* DetailDefaultRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D3E42222369173800F3BF1F /* DetailDefaultRouter.swift */; };
+		8D3E42252369174400F3BF1F /* DetailDefaultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D3E42242369174400F3BF1F /* DetailDefaultView.swift */; };
 		8D9761342365B29E00D8D500 /* TouristSiteTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D9761322365B29E00D8D500 /* TouristSiteTableViewCell.swift */; };
 		8D9761352365B29E00D8D500 /* TouristSiteTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8D9761332365B29E00D8D500 /* TouristSiteTableViewCell.xib */; };
 		8D9761382365C7D900D8D500 /* TouristImageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D9761362365C7D800D8D500 /* TouristImageCollectionViewCell.swift */; };
@@ -50,6 +59,15 @@
 		1CD5CC2DDB665D48820FC654 /* Pods_TravelTaipeiTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TravelTaipeiTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3FA57629C030AD1BC61E299B /* Pods_TravelTaipei.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TravelTaipei.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D38C12D2366FE3D0073EEB4 /* MainPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPresenterTests.swift; sourceTree = "<group>"; };
+		8D3E42112369169E00F3BF1F /* DetailModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailModule.swift; sourceTree = "<group>"; };
+		8D3E4215236916CA00F3BF1F /* DetailInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailInteractor.swift; sourceTree = "<group>"; };
+		8D3E4217236916D400F3BF1F /* DetailPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPresenter.swift; sourceTree = "<group>"; };
+		8D3E4219236916DF00F3BF1F /* DetailRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailRouter.swift; sourceTree = "<group>"; };
+		8D3E421C236916FF00F3BF1F /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
+		8D3E421E2369171D00F3BF1F /* DetailDefaultInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailDefaultInteractor.swift; sourceTree = "<group>"; };
+		8D3E42202369172D00F3BF1F /* DetailDefaultPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailDefaultPresenter.swift; sourceTree = "<group>"; };
+		8D3E42222369173800F3BF1F /* DetailDefaultRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailDefaultRouter.swift; sourceTree = "<group>"; };
+		8D3E42242369174400F3BF1F /* DetailDefaultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailDefaultView.swift; sourceTree = "<group>"; };
 		8D9761322365B29E00D8D500 /* TouristSiteTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TouristSiteTableViewCell.swift; sourceTree = "<group>"; };
 		8D9761332365B29E00D8D500 /* TouristSiteTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TouristSiteTableViewCell.xib; sourceTree = "<group>"; };
 		8D9761362365C7D800D8D500 /* TouristImageCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TouristImageCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -118,6 +136,38 @@
 				8D38C12D2366FE3D0073EEB4 /* MainPresenterTests.swift */,
 			);
 			path = MainInteractorTests;
+			sourceTree = "<group>";
+		};
+		8D3E4213236916A700F3BF1F /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+				8D3E42112369169E00F3BF1F /* DetailModule.swift */,
+				8D3E4214236916B600F3BF1F /* Interfaces */,
+				8D3E421B236916E300F3BF1F /* Implementations */,
+			);
+			path = Detail;
+			sourceTree = "<group>";
+		};
+		8D3E4214236916B600F3BF1F /* Interfaces */ = {
+			isa = PBXGroup;
+			children = (
+				8D3E4215236916CA00F3BF1F /* DetailInteractor.swift */,
+				8D3E4217236916D400F3BF1F /* DetailPresenter.swift */,
+				8D3E4219236916DF00F3BF1F /* DetailRouter.swift */,
+				8D3E421C236916FF00F3BF1F /* DetailView.swift */,
+			);
+			path = Interfaces;
+			sourceTree = "<group>";
+		};
+		8D3E421B236916E300F3BF1F /* Implementations */ = {
+			isa = PBXGroup;
+			children = (
+				8D3E421E2369171D00F3BF1F /* DetailDefaultInteractor.swift */,
+				8D3E42202369172D00F3BF1F /* DetailDefaultPresenter.swift */,
+				8D3E42222369173800F3BF1F /* DetailDefaultRouter.swift */,
+				8D3E42242369174400F3BF1F /* DetailDefaultView.swift */,
+			);
+			path = Implementations;
 			sourceTree = "<group>";
 		};
 		8D9761312365B25300D8D500 /* Views */ = {
@@ -196,6 +246,7 @@
 			isa = PBXGroup;
 			children = (
 				8DA3425723631F6400B3F14C /* Main */,
+				8D3E4213236916A700F3BF1F /* Detail */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -459,15 +510,24 @@
 				8DA3425E236321EF00B3F14C /* MainRouter.swift in Sources */,
 				8DA34260236321FF00B3F14C /* MainPresenter.swift in Sources */,
 				8DA34267236325BE00B3F14C /* MainDefaultRouter.swift in Sources */,
+				8D3E4218236916D400F3BF1F /* DetailPresenter.swift in Sources */,
 				8DA342782363E3F600B3F14C /* App.swift in Sources */,
+				8D3E421D236916FF00F3BF1F /* DetailView.swift in Sources */,
 				8DA34269236325D200B3F14C /* MainDefaultPresenter.swift in Sources */,
 				8DA342372362E84200B3F14C /* ViewController.swift in Sources */,
 				8DA3425C236321D300B3F14C /* MainView.swift in Sources */,
+				8D3E4216236916CA00F3BF1F /* DetailInteractor.swift in Sources */,
 				8DA342722363DCA700B3F14C /* TouristSite.swift in Sources */,
+				8D3E42122369169E00F3BF1F /* DetailModule.swift in Sources */,
 				8DA3426F2363DBF900B3F14C /* ApiServices.swift in Sources */,
+				8D3E42252369174400F3BF1F /* DetailDefaultView.swift in Sources */,
+				8D3E421A236916DF00F3BF1F /* DetailRouter.swift in Sources */,
 				8DA3426B2363260000B3F14C /* MainDefaultInteractor.swift in Sources */,
+				8D3E42212369172D00F3BF1F /* DetailDefaultPresenter.swift in Sources */,
+				8D3E421F2369171D00F3BF1F /* DetailDefaultInteractor.swift in Sources */,
 				8DA3425923631F8100B3F14C /* MainModule.swift in Sources */,
 				8D9761342365B29E00D8D500 /* TouristSiteTableViewCell.swift in Sources */,
+				8D3E42232369173800F3BF1F /* DetailDefaultRouter.swift in Sources */,
 				8DA34265236325A700B3F14C /* MainDefaultView.swift in Sources */,
 				8D9761382365C7D900D8D500 /* TouristImageCollectionViewCell.swift in Sources */,
 				8DA342622363221400B3F14C /* MainInteractor.swift in Sources */,
