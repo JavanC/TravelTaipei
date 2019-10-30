@@ -19,6 +19,9 @@
 		8D3E42212369172D00F3BF1F /* DetailDefaultPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D3E42202369172D00F3BF1F /* DetailDefaultPresenter.swift */; };
 		8D3E42232369173800F3BF1F /* DetailDefaultRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D3E42222369173800F3BF1F /* DetailDefaultRouter.swift */; };
 		8D3E42252369174400F3BF1F /* DetailDefaultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D3E42242369174400F3BF1F /* DetailDefaultView.swift */; };
+		8D3E422B2369352F00F3BF1F /* TouristSiteDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D3E422A2369352F00F3BF1F /* TouristSiteDetailView.swift */; };
+		8D3E422D2369354E00F3BF1F /* TouristSiteDetailView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8D3E422C2369354E00F3BF1F /* TouristSiteDetailView.xib */; };
+		8D3E42302369428600F3BF1F /* XibView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D3E422F2369428600F3BF1F /* XibView.swift */; };
 		8D9761342365B29E00D8D500 /* TouristSiteTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D9761322365B29E00D8D500 /* TouristSiteTableViewCell.swift */; };
 		8D9761352365B29E00D8D500 /* TouristSiteTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8D9761332365B29E00D8D500 /* TouristSiteTableViewCell.xib */; };
 		8D9761382365C7D900D8D500 /* TouristImageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D9761362365C7D800D8D500 /* TouristImageCollectionViewCell.swift */; };
@@ -68,6 +71,9 @@
 		8D3E42202369172D00F3BF1F /* DetailDefaultPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailDefaultPresenter.swift; sourceTree = "<group>"; };
 		8D3E42222369173800F3BF1F /* DetailDefaultRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailDefaultRouter.swift; sourceTree = "<group>"; };
 		8D3E42242369174400F3BF1F /* DetailDefaultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailDefaultView.swift; sourceTree = "<group>"; };
+		8D3E422A2369352F00F3BF1F /* TouristSiteDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TouristSiteDetailView.swift; sourceTree = "<group>"; };
+		8D3E422C2369354E00F3BF1F /* TouristSiteDetailView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TouristSiteDetailView.xib; sourceTree = "<group>"; };
+		8D3E422F2369428600F3BF1F /* XibView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XibView.swift; sourceTree = "<group>"; };
 		8D9761322365B29E00D8D500 /* TouristSiteTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TouristSiteTableViewCell.swift; sourceTree = "<group>"; };
 		8D9761332365B29E00D8D500 /* TouristSiteTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TouristSiteTableViewCell.xib; sourceTree = "<group>"; };
 		8D9761362365C7D800D8D500 /* TouristImageCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TouristImageCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -177,6 +183,9 @@
 				8D9761332365B29E00D8D500 /* TouristSiteTableViewCell.xib */,
 				8D9761362365C7D800D8D500 /* TouristImageCollectionViewCell.swift */,
 				8D9761372365C7D800D8D500 /* TouristImageCollectionViewCell.xib */,
+				8D3E422A2369352F00F3BF1F /* TouristSiteDetailView.swift */,
+				8D3E422C2369354E00F3BF1F /* TouristSiteDetailView.xib */,
+				8D3E422F2369428600F3BF1F /* XibView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -424,6 +433,7 @@
 				8DA3423F2362E84300B3F14C /* LaunchScreen.storyboard in Resources */,
 				8DA3423C2362E84300B3F14C /* Assets.xcassets in Resources */,
 				8DA3423A2362E84200B3F14C /* Main.storyboard in Resources */,
+				8D3E422D2369354E00F3BF1F /* TouristSiteDetailView.xib in Resources */,
 				8D9761352365B29E00D8D500 /* TouristSiteTableViewCell.xib in Resources */,
 				8D9761392365C7D900D8D500 /* TouristImageCollectionViewCell.xib in Resources */,
 			);
@@ -520,6 +530,7 @@
 				8DA342722363DCA700B3F14C /* TouristSite.swift in Sources */,
 				8D3E42122369169E00F3BF1F /* DetailModule.swift in Sources */,
 				8DA3426F2363DBF900B3F14C /* ApiServices.swift in Sources */,
+				8D3E422B2369352F00F3BF1F /* TouristSiteDetailView.swift in Sources */,
 				8D3E42252369174400F3BF1F /* DetailDefaultView.swift in Sources */,
 				8D3E421A236916DF00F3BF1F /* DetailRouter.swift in Sources */,
 				8DA3426B2363260000B3F14C /* MainDefaultInteractor.swift in Sources */,
@@ -528,6 +539,7 @@
 				8DA3425923631F8100B3F14C /* MainModule.swift in Sources */,
 				8D9761342365B29E00D8D500 /* TouristSiteTableViewCell.swift in Sources */,
 				8D3E42232369173800F3BF1F /* DetailDefaultRouter.swift in Sources */,
+				8D3E42302369428600F3BF1F /* XibView.swift in Sources */,
 				8DA34265236325A700B3F14C /* MainDefaultView.swift in Sources */,
 				8D9761382365C7D900D8D500 /* TouristImageCollectionViewCell.swift in Sources */,
 				8DA342622363221400B3F14C /* MainInteractor.swift in Sources */,

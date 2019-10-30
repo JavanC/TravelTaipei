@@ -29,7 +29,9 @@ class MainDefaultView: UIViewController {
     func configureNavigationBar() {
         self.title = "台北市熱門景點"
         let barTintColor = UIColor(red: 70/255, green: 191/255, blue: 233/255, alpha: 1.0)
+        self.navigationItem.backBarButtonItem = UIBarButtonItem()
         self.navigationController?.navigationBar.isTranslucent = false
+        self.navigationController?.navigationBar.tintColor = .white
         self.navigationController?.navigationBar.barTintColor = barTintColor
         self.navigationController?.navigationBar.titleTextAttributes = [.foregroundColor: UIColor.white]
     }

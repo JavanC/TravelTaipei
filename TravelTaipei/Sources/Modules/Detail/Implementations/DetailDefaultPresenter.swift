@@ -15,12 +15,17 @@ class DetailDefaultPresenter {
     weak var view: DetailView?
     
     let touristSite: TouristSite
+    let imageIndex: Int
     
-    init(touristSite: TouristSite) {
+    init(touristSite: TouristSite, imageIndex: Int) {
         self.touristSite = touristSite
+        self.imageIndex = imageIndex
     }
 }
 
 extension DetailDefaultPresenter: DetailPresenter {
     
+    func reload() {
+        self.view?.setup(with: touristSite, imageIndex: imageIndex)
+    }
 }

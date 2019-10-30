@@ -11,4 +11,6 @@ import Foundation
 protocol DetailView: class {
     
     var presenter: DetailPresenter? { get set }
+    
+    func setup(with touristSite: TouristSite, imageIndex: Int)
 }

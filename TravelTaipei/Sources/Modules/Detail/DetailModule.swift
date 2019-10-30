@@ -11,10 +11,10 @@ import UIKit
 
 class DetailModule {
     
-    func buildDefault(with touristSite: TouristSite) -> UIViewController {
+    func buildDefault(with touristSite: TouristSite, imageIndex: Int) -> UIViewController {
         let view = DetailDefaultView()
         let interactor = DetailDefaultInteractor()
-        let presenter = DetailDefaultPresenter(touristSite: touristSite)
+        let presenter = DetailDefaultPresenter(touristSite: touristSite, imageIndex: imageIndex)
         let router = DetailDefaultRouter()
 
         view.presenter = presenter

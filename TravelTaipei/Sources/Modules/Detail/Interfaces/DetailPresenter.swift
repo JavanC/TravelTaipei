@@ -13,4 +13,6 @@ protocol DetailPresenter: class {
     var interactor: DetailInteractor? { get set }
     var router: DetailRouter? { get set }
     var view: DetailView? { get set }
+    
+    func reload()
 }
