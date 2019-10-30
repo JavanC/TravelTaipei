@@ -13,19 +13,13 @@ class DetailDefaultPresenter {
     var interactor: DetailInteractor?
     var router: DetailRouter?
     weak var view: DetailView?
-    
-    let touristSite: TouristSite
-    let imageIndex: Int
-    
-    init(touristSite: TouristSite, imageIndex: Int) {
-        self.touristSite = touristSite
-        self.imageIndex = imageIndex
-    }
 }
 
 extension DetailDefaultPresenter: DetailPresenter {
     
     func reload() {
-        self.view?.setup(with: touristSite, imageIndex: imageIndex)
+        if let touristSite = interactor?.touristSite, let imageIndex = interactor?.imageIndex {
+            self.view?.setup(with: touristSite, imageIndex: imageIndex)
+        }
     }
 }

@@ -14,7 +14,7 @@ class DetailModule {
     func buildDefault(with touristSite: TouristSite, imageIndex: Int) -> UIViewController {
         let view = DetailDefaultView()
         let interactor = DetailDefaultInteractor()
-        let presenter = DetailDefaultPresenter(touristSite: touristSite, imageIndex: imageIndex)
+        let presenter = DetailDefaultPresenter()
         let router = DetailDefaultRouter()
 
         view.presenter = presenter
@@ -24,6 +24,8 @@ class DetailModule {
         presenter.router = router
         
         interactor.presenter = presenter
+        interactor.touristSite = touristSite
+        interactor.imageIndex = imageIndex
         
         router.presenter = presenter
         router.viewController = view

@@ -11,6 +11,9 @@ import Foundation
 class DetailDefaultInteractor {
     
     weak var presenter: DetailPresenter?
+    
+    var touristSite: TouristSite?
+    var imageIndex: Int?
 }
 
 extension DetailDefaultInteractor: DetailInteractor {

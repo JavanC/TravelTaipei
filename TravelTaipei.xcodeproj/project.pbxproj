@@ -22,6 +22,8 @@
 		8D3E422B2369352F00F3BF1F /* TouristSiteDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D3E422A2369352F00F3BF1F /* TouristSiteDetailView.swift */; };
 		8D3E422D2369354E00F3BF1F /* TouristSiteDetailView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8D3E422C2369354E00F3BF1F /* TouristSiteDetailView.xib */; };
 		8D3E42302369428600F3BF1F /* XibView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D3E422F2369428600F3BF1F /* XibView.swift */; };
+		8D3E423523697D9600F3BF1F /* DetailInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D3E423423697D9600F3BF1F /* DetailInteractorTests.swift */; };
+		8D3E4237236982BD00F3BF1F /* DetailPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D3E4236236982BD00F3BF1F /* DetailPresenterTests.swift */; };
 		8D9761342365B29E00D8D500 /* TouristSiteTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D9761322365B29E00D8D500 /* TouristSiteTableViewCell.swift */; };
 		8D9761352365B29E00D8D500 /* TouristSiteTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8D9761332365B29E00D8D500 /* TouristSiteTableViewCell.xib */; };
 		8D9761382365C7D900D8D500 /* TouristImageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D9761362365C7D800D8D500 /* TouristImageCollectionViewCell.swift */; };
@@ -74,6 +76,8 @@
 		8D3E422A2369352F00F3BF1F /* TouristSiteDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TouristSiteDetailView.swift; sourceTree = "<group>"; };
 		8D3E422C2369354E00F3BF1F /* TouristSiteDetailView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TouristSiteDetailView.xib; sourceTree = "<group>"; };
 		8D3E422F2369428600F3BF1F /* XibView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XibView.swift; sourceTree = "<group>"; };
+		8D3E423423697D9600F3BF1F /* DetailInteractorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailInteractorTests.swift; sourceTree = "<group>"; };
+		8D3E4236236982BD00F3BF1F /* DetailPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPresenterTests.swift; sourceTree = "<group>"; };
 		8D9761322365B29E00D8D500 /* TouristSiteTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TouristSiteTableViewCell.swift; sourceTree = "<group>"; };
 		8D9761332365B29E00D8D500 /* TouristSiteTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TouristSiteTableViewCell.xib; sourceTree = "<group>"; };
 		8D9761362365C7D800D8D500 /* TouristImageCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TouristImageCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -135,13 +139,13 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		8D38C12C2366F09C0073EEB4 /* MainInteractorTests */ = {
+		8D38C12C2366F09C0073EEB4 /* MainTests */ = {
 			isa = PBXGroup;
 			children = (
 				8DA342492362E84300B3F14C /* MainInteractorTests.swift */,
 				8D38C12D2366FE3D0073EEB4 /* MainPresenterTests.swift */,
 			);
-			path = MainInteractorTests;
+			path = MainTests;
 			sourceTree = "<group>";
 		};
 		8D3E4213236916A700F3BF1F /* Detail */ = {
@@ -174,6 +178,15 @@
 				8D3E42242369174400F3BF1F /* DetailDefaultView.swift */,
 			);
 			path = Implementations;
+			sourceTree = "<group>";
+		};
+		8D3E423323697D4C00F3BF1F /* DetailTests */ = {
+			isa = PBXGroup;
+			children = (
+				8D3E423423697D9600F3BF1F /* DetailInteractorTests.swift */,
+				8D3E4236236982BD00F3BF1F /* DetailPresenterTests.swift */,
+			);
+			path = DetailTests;
 			sourceTree = "<group>";
 		};
 		8D9761312365B25300D8D500 /* Views */ = {
@@ -225,7 +238,8 @@
 		8DA342482362E84300B3F14C /* TravelTaipeiTests */ = {
 			isa = PBXGroup;
 			children = (
-				8D38C12C2366F09C0073EEB4 /* MainInteractorTests */,
+				8D38C12C2366F09C0073EEB4 /* MainTests */,
+				8D3E423323697D4C00F3BF1F /* DetailTests */,
 				8DA3424B2362E84300B3F14C /* Info.plist */,
 			);
 			path = TravelTaipeiTests;
@@ -554,6 +568,8 @@
 			files = (
 				8DA3424A2362E84300B3F14C /* MainInteractorTests.swift in Sources */,
 				8D38C12E2366FE3D0073EEB4 /* MainPresenterTests.swift in Sources */,
+				8D3E423523697D9600F3BF1F /* DetailInteractorTests.swift in Sources */,
+				8D3E4237236982BD00F3BF1F /* DetailPresenterTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

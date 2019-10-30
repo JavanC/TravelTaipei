@@ -11,4 +11,7 @@ import Foundation
 protocol DetailInteractor: class {
     
     var presenter: DetailPresenter? { get set }
+    
+    var touristSite: TouristSite? { get set }
+    var imageIndex: Int? { get set }
 }
